@@ -100,7 +100,7 @@ export default function Home() {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/40 dark:from-[#0F172A]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <div className="flex justify-between items-start">
+                  <div className="flex justify-between items-start gap-4">
                     <div>
                       <span className="text-xs font-bold text-[#38BDF8] tracking-widest uppercase mb-2 block">
                         {work.category}
@@ -112,7 +112,7 @@ export default function Home() {
                         {work.description}
                       </p>
                     </div>
-                    <div className="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-[#38BDF8] group-hover:border-[#38BDF8] dark:group-hover:bg-[#38BDF8] dark:group-hover:border-[#38BDF8] transition-all">
+                    <div className="shrink-0 w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-[#38BDF8] group-hover:border-[#38BDF8] dark:group-hover:bg-[#38BDF8] dark:group-hover:border-[#38BDF8] transition-all">
                       <svg
                         className="w-5 h-5 group-hover:text-white transition-colors"
                         fill="none"
