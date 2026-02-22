@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/works/lp-it-consult/:path*",
+      "destination": "https://lp-it-consult.vercel.app/:path*"
+    }
+  ]
+}
