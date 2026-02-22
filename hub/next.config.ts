@@ -9,18 +9,14 @@ const nextConfig: NextConfig = {
     const baseUrl = process.env.WORKS_BASE_URL || "http://localhost:5173";
     const isProd = process.env.NODE_ENV === "production";
 
-    // ローカル(Vite)でのみ、ルートアクセス時に index.html を明示的に付与する
-    const devRewrites = isProd
-      ? []
-      : [
-          {
-            source: "/works/:projectName/",
-            destination: `${baseUrl}/works/:projectName/index.html`,
-          },
-        ];
-
     return [
-      ...devRewrites,
+      {
+        // /works/lp-it-consult/ のようなルートアクセスに対して、
+        // ローカルのViteサーバーの場合は明示的にindex.htmlを要求し、
+        // Vercel本番環境の場合はリダイレクトループを防ぐため付与しない
+        source: "/works/:projectName/",
+        destination: `${baseUrl}/works/:projectName/${baseUrl.includes("localhost") ? "index.html" : ""}`,
+      },
       {
         // その他のアセット（CSS, JS, 画像など）や本番環境のルート遷移はそのまま転送
         source: "/works/:path*",
