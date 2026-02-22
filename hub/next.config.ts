@@ -14,9 +14,12 @@ const nextConfig: NextConfig = {
 
     return [
       {
-        // /works/lp-it-consult/ のようなルートアクセスに対して、
-        // ローカルのViteサーバーの場合は明示的にindex.htmlを要求し、
-        // Vercel本番環境の場合はリダイレクトループを防ぐため付与しない
+        // /works/lp-it-consult（末尾スラッシュなし）へのアクセスをローカルでindex.htmlへプロキシ
+        source: "/works/:projectName",
+        destination: `${baseUrl}/works/:projectName/index.html`,
+      },
+      {
+        // /works/lp-it-consult/（末尾スラッシュあり）へのアクセスをローカルでindex.htmlへプロキシ
         source: "/works/:projectName/",
         destination: `${baseUrl}/works/:projectName/index.html`,
       },
