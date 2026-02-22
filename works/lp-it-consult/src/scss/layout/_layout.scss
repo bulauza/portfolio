@@ -1,0 +1,56 @@
+@use "../foundation/variables" as *;
+
+.l-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.l-section {
+  padding: 80px 0;
+
+  @include md {
+    padding: 120px 0;
+  }
+}
+
+.l-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  // CSS変数を使うことで、ダークモード時は半透明の暗い背景になる
+  background-color: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: $font-en;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: $color-text;
+  }
+}
+
+.l-section__header {
+  text-align: center;
+  margin-bottom: 0;
+
+  .c-tag {
+    // sectionヘッダーのtagは中央揃え
+    text-align: center;
+  }
+}

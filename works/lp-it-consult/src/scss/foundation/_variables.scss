@@ -1,0 +1,90 @@
+// ============================================================
+// CSS カスタムプロパティで Light / Dark を切り替え
+// ============================================================
+:root {
+  // ブラウザにLight/Darkの両対応を宣言（prefers-color-schemeより先に解釈される）
+  color-scheme: light dark;
+
+  // Light Mode（デフォルト）— 純白を避け柔らかいオフホワイト
+  --color-bg:      #F9F9FB;  // off-white
+  --color-bg-subtle: #F0F0F2;
+  --color-bg-card: #FFFFFF;
+  --color-primary: #0071E3;  // Apple Blue
+  --color-text:    #1D1D1F;  // Apple Black
+  --color-text-muted: #6E6E73;
+  --color-border:  #D2D2D7;
+  --color-hero-grad-start: #EFF0F5;
+  --color-hero-grad-end:   #F9F9FB;
+  --color-case-bg: #F0F0F2;
+  --color-case-img-start: #DDE8F8;
+  --color-case-img-end:   #C8DCF7;
+  --color-stats:   var(--color-primary);
+  --color-shadow:  rgba(0, 0, 0, 0.06);
+  --color-shadow-hover: rgba(0, 0, 0, 0.1);
+  --color-input-focus-ring: rgba(0, 113, 227, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Dark Mode — Apple macOS 14風
+    --color-bg:      #111111;
+    --color-bg-subtle: #1C1C1E;
+    --color-bg-card: #1C1C1E;
+    --color-primary: #2997FF;  // Dark mode Apple Blue（明るめ）
+    --color-text:    #F5F5F7;
+    --color-text-muted: #98989D;
+    --color-border:  rgba(255, 255, 255, 0.1);
+    --color-hero-grad-start: #1A1A2E;
+    --color-hero-grad-end:   #111111;
+    --color-case-bg: #1C1C1E;
+    --color-case-img-start: #1E3A5F;
+    --color-case-img-end:   #162F50;
+    --color-stats:   var(--color-primary);
+    --color-shadow:  rgba(0, 0, 0, 0.3);
+    --color-shadow-hover: rgba(0, 0, 0, 0.5);
+    --color-input-focus-ring: rgba(41, 151, 255, 0.2);
+  }
+}
+
+// SCSS変数はCSS変数へのブリッジとして使用
+$color-bg:        var(--color-bg);
+$color-bg-subtle: var(--color-bg-subtle);
+$color-bg-card:   var(--color-bg-card);
+$color-primary:   var(--color-primary);
+$color-text:      var(--color-text);
+$color-text-muted: var(--color-text-muted);
+$color-border:    var(--color-border);
+
+// Typography
+$font-ja: "Noto Sans JP", sans-serif;
+$font-en: "Inter", sans-serif;
+
+// Breakpoints
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+// Mixins
+@mixin md {
+  @media (min-width: #{$bp-md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$bp-lg}) {
+    @content;
+  }
+}
+
+// スクロールアニメーション用
+@mixin reveal-base {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

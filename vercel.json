@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/works/:path*",
+      "destination": "https://example.com/works/:path*"
+    }
+  ]
+}

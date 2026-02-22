@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSSより先に解釈されるため、FOUCを防ぐための最重要タグ -->
+    <meta name="color-scheme" content="light dark">
+    <title>NexConsult | 信頼と先進のITコンサルティング</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/scss/style.scss">
+    <style>
+        /* 外部CSSロード前のFOUC防止用クリティカルスタイル */
+        :root { color-scheme: light dark; }
+        body { 
+            background-color: #F9F9FB; 
+            color: #1D1D1F; 
+            margin: 0;
+        }
+        @media (prefers-color-scheme: dark) {
+            body { 
+                background-color: #111111; 
+                color: #F5F5F7; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="l-header">
+        <div class="l-container">
+            <div class="l-header__inner">
+                <a href="/" class="l-header__logo font-en font-bold">NEXCONSULT</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="p-hero">
+            <div class="l-container">
+                <div class="p-hero__content js-reveal">
+                    <span class="p-hero__tagline">Future Visionary</span>
+                    <h1 class="p-hero__title">レガシーを、<br>資産へ。</h1>
+                    <p class="p-hero__description">
+                        私たちは、企業の根幹を支えるシステムの刷新から、次世代のビジネスモデルを構築するDX推進まで、一気通貫でサポートするITコンサルティングファームです。
+                    </p>
+                    <div class="p-hero__actions">
+                        <a href="#contact" class="c-button c-button--primary">無料相談を開始する</a>
+                        <a href="#service" class="c-button c-button--outline">サービス詳細</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section -->
+        <section id="service" class="l-section">
+            <div class="l-container">
+                <header class="l-section__header text-center js-reveal">
+                    <span class="c-tag">Our Services</span>
+                    <h2 class="text-3xl font-bold">提供サービス</h2>
+                </header>
+
+                <div class="p-service__grid">
+                    <div class="c-card js-reveal">
+                        <div class="p-service__card-icon">01</div>
+                        <h3 class="p-service__card-title font-bold">システム刷新</h3>
+                        <p class="p-service__card-text">
+                            レガシーシステムのブラックボックス化を解消し、スケーラビリティと保守性の高いモダンなアーキテクチャへ移行します。
+                        </p>
+                    </div>
+                    <div class="c-card js-reveal">
+                        <div class="p-service__card-icon">02</div>
+                        <h3 class="p-service__card-title font-bold">DX推進支援</h3>
+                        <p class="p-service__card-text">
+                            単なるIT導入に留まらず、ビジネスプロセス自体の変革とデータドリブンな意思決定基盤の構築を支援します。
+                        </p>
+                    </div>
+                    <div class="c-card js-reveal">
+                        <div class="p-service__card-icon">03</div>
+                        <h3 class="p-service__card-title font-bold">クラウド移行</h3>
+                        <p class="p-service__card-text">
+                            AWS/Google Cloud/Azureを最大限に活用し、コスト最適化と高可用性を実現するインフラ構築を提供します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section class="l-section p-case">
+            <div class="l-container">
+                <header class="l-section__header js-reveal">
+                    <span class="c-tag">Case Studies</span>
+                    <h2 class="text-3xl font-bold">導入実績</h2>
+                </header>
+
+                <div class="p-case__list">
+                    <div class="p-case__item js-reveal">
+                        <div class="p-case__item-image"></div>
+                        <div class="p-case__item-content">
+                            <span class="p-case__item-stats">30% reduction</span>
+                            <h3 class="p-case__item-title">大手製造業基幹システム刷新</h3>
+                            <p class="p-case__item-text">
+                                基幹システムのクラウド移行と並行して業務プロセスを整理。年間運用コストの30%削減と処理速度の5倍向上を実現。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-case__item js-reveal">
+                        <div class="p-case__item-image"></div>
+                        <div class="p-case__item-content">
+                            <span class="p-case__item-stats">+200% growth</span>
+                            <h3 class="p-case__item-title">小売チェーン向けDX基盤構築</h3>
+                            <p class="p-case__item-text">
+                                全店舗のデータをリアルタイムに可視化。需要予測精度の向上により、在庫回転率が200%改善。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="l-section p-tech">
+            <div class="l-container">
+                <div class="p-tech__list js-reveal">
+                    <span class="p-tech__item">AWS</span>
+                    <span class="p-tech__item">Google Cloud</span>
+                    <span class="p-tech__item">TypeScript</span>
+                    <span class="p-tech__item">Next.js</span>
+                    <span class="p-tech__item">PostgreSQL</span>
+                    <span class="p-tech__item">Terraform</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="l-section">
+            <div class="l-container">
+                <div class="js-reveal text-center">
+                    <span class="c-tag">Get in touch</span>
+                    <h2 class="text-3xl font-bold">お問い合わせ</h2>
+                    <p class="text-zinc-500 mt-4 px-4">
+                        貴社のビジネス課題を、テクノロジーで解決します。<br>まずはお気軽にご相談ください。
+                    </p>
+                </div>
+
+                <form class="p-contact__form js-reveal">
+                    <div class="p-contact__field">
+                        <label class="p-contact__label">お名前</label>
+                        <input type="text" class="p-contact__input" placeholder="例：山田 太郎">
+                    </div>
+                    <div class="p-contact__field">
+                        <label class="p-contact__label">メールアドレス</label>
+                        <input type="email" class="p-contact__input" placeholder="example@nexconsult.jp">
+                    </div>
+                    <div class="p-contact__field">
+                        <label class="p-contact__label">お問い合わせ内容</label>
+                        <textarea class="p-contact__textarea" placeholder="ご相談内容をご記入ください"></textarea>
+                    </div>
+                    <button type="submit" class="c-button c-button--primary w-full">送信する</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="l-section py-12 border-t border-white/5 text-center">
+        <div class="l-container">
+            <p class="text-zinc-600 text-xs font-en uppercase tracking-widest">&copy; 2026 NEXCONSULT ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/ts/main.ts"></script>
+</body>
+</html>

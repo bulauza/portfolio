@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+dist/
+build/
+.npm
+*.log
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Next.js
+.next/
+out/
+.env*
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+*.sql
+
+# OS 固有
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / エディタ
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Vercel
+.vercel
+
+# docs
+docs/

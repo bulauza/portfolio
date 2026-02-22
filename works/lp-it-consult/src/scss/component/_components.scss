@@ -1,0 +1,75 @@
+// CSS変数は関数引数で使用不可のため、static値で代替
+// hover時の色変化はfilterで代替（CSS変数と相性が良い）
+@use "sass:color";
+@use "../foundation/variables" as *;
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+
+  &--primary {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover {
+      // CSS変数はfilterが使えるのでbrightness調整で代替
+      filter: brightness(0.88);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid $color-border;
+    color: $color-text;
+
+    &:hover {
+      background-color: $color-bg-subtle;
+    }
+  }
+}
+
+.c-card {
+  background-color: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 2px 12px var(--color-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px var(--color-shadow-hover);
+  }
+}
+
+.c-tag {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $color-primary;
+  margin-bottom: 12px;
+  display: block;
+  font-family: $font-en;
+}
+
+.c-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: $color-text;
+  line-height: 1.15;
+
+  @include md {
+    font-size: 48px;
+  }
+}
