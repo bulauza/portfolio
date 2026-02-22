@@ -7,16 +7,22 @@ const nextConfig: NextConfig = {
   async rewrites() {
     // 環境変数からベースURLを取得。設定がない場合はローカルのViteサーバー（5173）をフォールバックとして使用
     const baseUrl = process.env.WORKS_BASE_URL || "http://localhost:5173";
+    const isProd = process.env.NODE_ENV === "production";
+
+    // ローカル(Vite)でのみ、ルートアクセス時に index.html を明示的に付与する
+    const devRewrites = isProd
+      ? []
+      : [
+          {
+            source: "/works/:projectName/",
+            destination: `${baseUrl}/works/:projectName/index.html`,
+          },
+        ];
 
     return [
+      ...devRewrites,
       {
-        // /works/lp-it-consult/ のようなルートアクセスに対して、
-        // Viteは自動でindex.htmlを返さないため明示的にマップする
-        source: "/works/:projectName/",
-        destination: `${baseUrl}/works/:projectName/index.html`,
-      },
-      {
-        // その他のアセット（CSS, JS, 画像など）はそのまま転送
+        // その他のアセット（CSS, JS, 画像など）や本番環境のルート遷移はそのまま転送
         source: "/works/:path*",
         destination: `${baseUrl}/works/:path*`,
       },
