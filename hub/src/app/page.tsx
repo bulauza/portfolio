@@ -1,33 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import works from "@/data/works.json";
-import Pic from "@/images/works/lp-it-consult.png";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#0F172A] text-[#0F172A] dark:text-[#F8FAFC] selection:bg-[#38BDF8] selection:text-white">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-500">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#F8FAFC]/80 dark:bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+      <nav className="fixed top-0 w-full z-50 bg-[var(--background)]/80 backdrop-blur-md border-b border-[var(--card-border)]">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="font-bold text-xl tracking-tight">
-            PORTFOLIO-BULAUZA
-          </span>
+          <Link
+            href="/"
+            className="font-bold text-xl tracking-tight hover:opacity-70 transition-opacity"
+          >
+            Bulauza's Portfolio
+          </Link>
           <div className="flex gap-8 text-sm font-medium items-center">
             <Link
               href="#about"
-              className="hover:text-[#38BDF8] dark:hover:text-[#38BDF8] transition-colors"
+              className="hover:text-[var(--accent)] transition-colors"
             >
               About
             </Link>
             <Link
               href="#works"
-              className="hover:text-[#38BDF8] dark:hover:text-[#38BDF8] transition-colors"
+              className="hover:text-[var(--accent)] transition-colors"
             >
               Works
             </Link>
             <Link
               href="mailto:your-email@example.com"
-              className="bg-[#0F172A] dark:bg-[#F8FAFC] text-white dark:text-[#0F172A] px-4 py-2 rounded-lg hover:bg-slate-800 dark:hover:bg-slate-200 transition-all"
+              className="px-5 py-2 bg-[var(--foreground)] text-[var(--background)] rounded-full hover:opacity-90 transition-all font-semibold"
             >
               Contact
             </Link>
@@ -35,110 +37,205 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="pt-32">
+      <main className="pt-32 pb-20 max-w-6xl mx-auto px-6">
         {/* Hero Section */}
-        <section id="about" className="max-w-6xl mx-auto px-6 mb-32">
+        <section id="about" className="mb-24">
           <div className="max-w-3xl">
-            <h1 className="text-6xl font-extrabold leading-tight mb-8">
-              Full-stack Engineering <br />
-              <span className="text-[#38BDF8]">meets</span> Web Crafting.
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
+              Engineering <br />
+              <span className="text-[var(--accent)]">for Business Growth.</span>
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
-              SaaS開発で培った堅牢な設計思考と、WordPressを用いた柔軟なコンテンツ管理を融合。
-              Vercel
-              Rewritesによるモダンなインフラ構成で、高速かつ運用性の高いWeb体験を提供します。
+            <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-10">
+              「作りたい」の背景にあるビジネスの課題を、
+              <br className="hidden md:block" />
+              確かな設計と最適な技術で解決へ導きます。
             </p>
-            <div className="flex gap-4">
-              {["Next.js", "TypeScript", "WordPress", "C#.NET", "SQL"].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-semibold text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700"
-                  >
-                    {tech}
-                  </span>
-                ),
-              )}
+          </div>
+
+          {/* Bento Grid Layout */}
+          <div className="bento-grid mt-16">
+            {/* Mission Statement */}
+            <div className="bento-card col-span-2 row-span-2 group">
+              <div>
+                <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
+                  Our Approach
+                </span>
+                <h2 className="text-3xl font-bold mb-6">
+                  長く、深く、
+                  <br />
+                  寄り添うエンジニアリング。
+                </h2>
+                <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
+                  「作って終わり」にせず、数年先も「頼んでよかった」と思える価値を提供し続けます。
+                  当たり前のことを、当たり前に、そして高い精度で。
+                  公開後の運用まで見据えた「使い心地の良さ」と「安心感」を、確かな技術で支えることが私のエンジニアリングです。
+                </p>
+              </div>
+              <div className="mt-8 pt-8 border-t border-[var(--card-border)]">
+                <div className="flex flex-wrap gap-2">
+                  {["安定性", "効率性", "成長支援"].map((val) => (
+                    <span
+                      key={val}
+                      className="text-xs font-medium px-3 py-1 bg-[var(--accent-muted)] text-[var(--accent)] rounded-md"
+                    >
+                      {val}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Tech Stack/Focus Card */}
+            <div className="bento-card col-span-2 group">
+              <div>
+                <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
+                  Focus
+                </span>
+                <div className="grid grid-cols-2 gap-y-6 mt-2">
+                  {[
+                    {
+                      label: "High Speed",
+                      desc: "表示速度で、利用者のストレスを最小限に",
+                    },
+                    {
+                      label: "Usability",
+                      desc: "迷わせない、直感的な操作感の追求",
+                    },
+                    {
+                      label: "Maintenance",
+                      desc: "納品後も、自社で楽に運用できる仕組み",
+                    },
+                    {
+                      label: "Security",
+                      desc: "データの安全を守る、堅実な基盤設計",
+                    },
+                  ].map((item) => (
+                    <div key={item.label} className="flex flex-col">
+                      <span className="text-lg font-bold">{item.label}</span>
+                      <span className="text-[10px] text-slate-400 font-bold uppercase">
+                        {item.desc}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Career Background */}
+            <div className="bento-card col-span-2 group">
+              <div>
+                <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
+                  Profile
+                </span>
+                <h3 className="text-xl font-bold mb-2 text-slate-400">
+                  Software Engineer
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400">
+                  システムエンジニアとして、SaaSや基幹システムの構築に携わってきました。
+                  その経験から得た「変化に強い設計」を活かし、作って終わりの制作ではなく、
+                  お客様と共に育っていくサイト作りを目指しています。
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Works Section */}
-        <section
-          id="works"
-          className="bg-[#F1F5F9] dark:bg-[#0F172A] py-32 border-t border-slate-200 dark:border-slate-800"
-        >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex justify-between items-end mb-16">
-              <div>
-                <h2 className="text-3xl font-bold mb-4 italic">
-                  Featured Works
-                </h2>
-                <p className="text-slate-500 dark:text-slate-400">
-                  案件受注に向けたWeb制作の実績コレクション
-                </p>
-              </div>
+        <section id="works" className="mt-40">
+          <div className="flex justify-between items-end mb-16 border-b border-[var(--card-border)] pb-8">
+            <div>
+              <h2 className="text-4xl font-bold tracking-tight">
+                Typical Works
+              </h2>
             </div>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-10">
-              {works.map((work) => (
-                <Link
-                  key={work.id}
-                  href={work.links?.demo}
-                  target="_blank"
-                  className="group block"
-                >
-                  <div className="relative aspect-video overflow-hidden rounded-2xl mb-6 bg-slate-100 dark:bg-slate-800 ring-1 ring-slate-200 dark:ring-slate-700">
-                    {work.image && (
-                      <Image
-                        src={work.image}
-                        alt={work.title}
-                        width={800}
-                        height={600}
-                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+          <div className="grid md:grid-cols-2 gap-12">
+            {works.map((work) => (
+              <Link
+                key={work.id}
+                href={work.links?.demo || "#"}
+                target="_blank"
+                className="group block"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-sm hover:shadow-xl transition-all duration-500">
+                  {work.image && (
+                    <Image
+                      src={work.image}
+                      alt={work.title}
+                      fill
+                      className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[var(--background)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="flex justify-between items-start">
+                  <div className="max-w-md">
+                    <div className="flex gap-2 mb-3">
+                      {work.tags?.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[10px] font-bold tracking-widest text-slate-400 border border-slate-200 dark:border-slate-800 px-2 py-0.5 rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-2xl font-bold group-hover:text-[var(--accent)] transition-colors mb-4">
+                      {work.title}
+                    </h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                      {work.description}
+                    </p>
+                  </div>
+                  <div className="w-12 h-12 rounded-full border border-[var(--card-border)] flex items-center justify-center group-hover:bg-[var(--accent)] group-hover:border-[var(--accent)] transition-all flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 group-hover:text-white transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
                       />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/40 dark:from-[#0F172A]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </svg>
                   </div>
-                  <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <span className="text-xs font-bold text-[#38BDF8] tracking-widest uppercase mb-2 block">
-                        {work.category}
-                      </span>
-                      <h3 className="text-xl font-bold group-hover:text-[#38BDF8] dark:group-hover:text-[#38BDF8] transition-colors">
-                        {work.title}
-                      </h3>
-                      <p className="mt-2 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                        {work.description}
-                      </p>
-                    </div>
-                    <div className="shrink-0 w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-[#38BDF8] group-hover:border-[#38BDF8] dark:group-hover:bg-[#38BDF8] dark:group-hover:border-[#38BDF8] transition-all">
-                      <svg
-                        className="w-5 h-5 group-hover:text-white transition-colors"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
       </main>
 
-      <footer className="py-20 text-center border-t border-slate-100 dark:border-slate-800">
-        <p className="text-slate-400 dark:text-slate-500 text-sm">
-          © 2026 portfolio-monorepo. Powered by Next.js & Vercel.
-        </p>
+      <footer className="py-20 text-center border-t border-[var(--card-border)] bg-[var(--background)]">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-slate-400 dark:text-slate-500 text-sm font-medium">
+            © 2026 Bulauza.
+          </p>
+          <div className="flex gap-10">
+            {[
+              {
+                name: "GitHub",
+                url: "https://github.com/bulauza",
+              },
+              {
+                name: "Zenn",
+                url: "https://zenn.dev/bulauza",
+              },
+            ].map((platform) => (
+              <Link
+                key={platform.name}
+                href={platform.url}
+                className="text-sm text-slate-400 hover:text-[var(--foreground)] transition-colors font-semibold"
+              >
+                {platform.name}
+              </Link>
+            ))}
+          </div>
+        </div>
       </footer>
     </div>
   );
