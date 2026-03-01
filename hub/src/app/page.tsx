@@ -1,6 +1,50 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 import works from "@/data/works.json";
+
+type ThemedWorkImageProps = {
+  darkSrc: string;
+  lightSrc: string;
+  alt: string;
+  isPriority: boolean;
+};
+
+/**
+ * OSのカラースキーム（prefers-color-scheme）に応じて、
+ * 対応するテーマの画像1枚だけをブラウザにダウンロードさせるコンポーネント。
+ * picture + source[media] によりブラウザ側で最適な1枚を選択する。
+ * Server Component のまま動作するため、クライアントバンドルに影響しない。
+ */
+function ThemedWorkImage({
+  darkSrc,
+  lightSrc,
+  alt,
+  isPriority,
+}: ThemedWorkImageProps) {
+  const sharedConfig = {
+    alt,
+    fill: true,
+    // グリッドが md:grid-cols-2 なのでモバイルは100vw、デスクトップは50vw相当
+    sizes: "(max-width: 768px) 100vw, 50vw",
+    priority: isPriority,
+    className:
+      "object-cover group-hover:scale-[1.02] transition-transform duration-700",
+  };
+
+  const { props: darkProps } = getImageProps({ src: darkSrc, ...sharedConfig });
+  const { props: lightProps } = getImageProps({
+    src: lightSrc,
+    ...sharedConfig,
+  });
+
+  return (
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcSet={darkProps.srcSet} />
+      {/* eslint-disable-next-line jsx-a11y/alt-text -- props に alt が含まれている */}
+      <img {...lightProps} />
+    </picture>
+  );
+}
 
 export default function Home() {
   return (
@@ -151,7 +195,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {works.map((work) => (
+            {works.map((work, index) => (
               <Link
                 key={work.id}
                 href={work.links?.demo || "#"}
@@ -160,20 +204,13 @@ export default function Home() {
               >
                 <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-sm hover:shadow-xl transition-all duration-500">
                   {work.imageDark && work.imageLight && (
-                    <>
-                      <Image
-                        src={work.imageDark}
-                        alt={work.title}
-                        fill
-                        className="object-cover group-hover:scale-[1.02] transition-transform duration-700 hidden dark:block"
-                      />
-                      <Image
-                        src={work.imageLight}
-                        alt={work.title}
-                        fill
-                        className="object-cover group-hover:scale-[1.02] transition-transform duration-700 dark:hidden"
-                      />
-                    </>
+                    <ThemedWorkImage
+                      darkSrc={work.imageDark}
+                      lightSrc={work.imageLight}
+                      alt={work.title}
+                      // 先頭の作品画像は LCP の対象になるため優先ロード
+                      isPriority={index === 0}
+                    />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-tr from-[var(--background)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>

@@ -31,6 +31,8 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    // AVIF -> WebP -> PNG の順で最適なフォーマットを選択 (AVIF は PNG 比 約50-80% 軽量)
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
