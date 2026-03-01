@@ -6,7 +6,8 @@
     "description": "DX推進・クラウド移行を手掛けるITコンサルファームのランディングページ。BEM設計のSCSSとTypeScriptで構築し、OS設定と連動するLight/Darkモードを実装。AppleのWebサイトを参考にデザインし、余白を大きく取った洗練されたデザインに仕上げた。",
     "role": "Design / Front-end",
     "period": "2026.02",
-    "image": "/images/works/lp-it-consult.png",
+    "imageDark": "/images/works/lp-it-consult-dark.png",
+    "imageLight": "/images/works/lp-it-consult-light.png",
     "featured": true,
     "links": {
       "demo": "/works/lp-it-consult/",

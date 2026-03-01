@@ -159,13 +159,21 @@ export default function Home() {
                 className="group block"
               >
                 <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-sm hover:shadow-xl transition-all duration-500">
-                  {work.image && (
-                    <Image
-                      src={work.image}
-                      alt={work.title}
-                      fill
-                      className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
-                    />
+                  {work.imageDark && work.imageLight && (
+                    <>
+                      <Image
+                        src={work.imageDark}
+                        alt={work.title}
+                        fill
+                        className="object-cover group-hover:scale-[1.02] transition-transform duration-700 hidden dark:block"
+                      />
+                      <Image
+                        src={work.imageLight}
+                        alt={work.title}
+                        fill
+                        className="object-cover group-hover:scale-[1.02] transition-transform duration-700 dark:hidden"
+                      />
+                    </>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-tr from-[var(--background)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
