@@ -8,4 +8,11 @@ export default defineConfig({
     port: 5173,
     strictPort: true, // 5173が使用中の場合エラーで停止（サイレントなポートずれを防止）
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
+    },
+  },
 });
