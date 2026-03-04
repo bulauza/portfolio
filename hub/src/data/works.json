@@ -14,5 +14,21 @@
       "source": null
     },
     "tags": ["TypeScript", "SCSS", "BEM", "Vite", "Dark Mode"]
+  },
+  {
+    "id": "game-brain-training-janken",
+    "title": "脳トレじゃんけん",
+    "category": "Game",
+    "description": "新卒時代に研修の合間に作成したじゃんけんゲーム。ローカルストレージを用いたスコア機能も実装。",
+    "role": "Design / Front-end",
+    "period": "2022.04",
+    "imageDark": "/images/works/",
+    "imageLight": "/images/works/",
+    "featured": true,
+    "links": {
+      "demo": "/works/game-brain-training-janken/",
+      "source": null
+    },
+    "tags": ["JaveScript", "HTML/CSS", "LocalStorage"]
   }
 ]
