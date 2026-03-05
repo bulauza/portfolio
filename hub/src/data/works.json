@@ -22,12 +22,12 @@
     "description": "新卒時代に研修の合間に作成したじゃんけんゲーム。ローカルストレージを用いたスコア機能も実装。",
     "role": "Design / Front-end",
     "period": "2022.04",
-    "imageDark": "/images/works/",
-    "imageLight": "/images/works/",
+    "imageDark": "/images/works/janken/dark.png",
+    "imageLight": "/images/works/janken/light.png",
     "featured": true,
     "links": {
-      "demo": "/works/game-brain-training-janken/",
-      "source": null
+      "demo": "https://bulauza.github.io/brain-training-janken/",
+      "source": "https://github.com/bulauza/brain-training-janken"
     },
     "tags": ["JavaScript", "HTML/CSS", "LocalStorage"]
   }

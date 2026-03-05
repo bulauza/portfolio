@@ -3,6 +3,10 @@
     {
       "source": "/works/lp-it-consult/:path*",
       "destination": "https://lp-it-consult.vercel.app/:path*"
+    },
+    {
+      "source": "/works/game-brain-training-janken/:path*",
+      "destination": "https://bulauza.github.io/brain-training-janken/:path*"
     }
   ],
   "headers": [
