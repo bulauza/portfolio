@@ -26,7 +26,7 @@
     "imageLight": "/images/works/janken/light.png",
     "featured": true,
     "links": {
-      "demo": "/works/game-brain-training-janken/",
+      "demo": "/works/game-brain-training-janken/index.html",
       "source": "https://github.com/bulauza/brain-training-janken"
     },
     "tags": ["JavaScript", "HTML/CSS", "LocalStorage"]
