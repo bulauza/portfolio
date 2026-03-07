@@ -1,0 +1,3 @@
+[submodule "works/game-brain-training-janken"]
+	path = works/game-brain-training-janken
+	url = https://github.com/bulauza/brain-training-janken
