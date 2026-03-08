@@ -105,9 +105,9 @@ export default function Home() {
                   Our Approach
                 </span>
                 <h2 className="text-3xl font-bold mb-6">
-                  長く、深く、
+                  長く　深く
                   <br />
-                  寄り添うエンジニアリング。
+                  寄り添うエンジニアリング
                 </h2>
                 <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
                   「作って終わり」にせず、数年先も「頼んでよかった」と思える価値を提供し続けます。
