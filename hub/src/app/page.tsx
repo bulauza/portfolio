@@ -89,7 +89,7 @@ export default function Home() {
               Engineering <br />
               <span className="text-[var(--accent)]">for Business Growth.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-10">
+            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-10">
               「作りたい」の背景にあるビジネスの課題を、
               <br className="hidden md:block" />
               確かな設計と最適な技術で解決へ導きます。
@@ -109,7 +109,7 @@ export default function Home() {
                   <br />
                   寄り添うエンジニアリング
                 </h2>
-                <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   「作って終わり」にせず、数年先も「頼んでよかった」と思える価値を提供し続けます。
                   当たり前のことを、当たり前に、そして高い精度で。
                   公開後の運用まで見据えた「使い心地の良さ」と「安心感」を、確かな技術で支えることが私のエンジニアリングです。
@@ -156,7 +156,7 @@ export default function Home() {
                   ].map((item) => (
                     <div key={item.label} className="flex flex-col">
                       <span className="text-lg font-bold">{item.label}</span>
-                      <span className="text-[10px] text-slate-400 font-bold uppercase">
+                      <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">
                         {item.desc}
                       </span>
                     </div>
@@ -171,10 +171,10 @@ export default function Home() {
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
                   Profile
                 </span>
-                <h3 className="text-xl font-bold mb-2 text-slate-400">
+                <h3 className="text-xl font-bold mb-2 text-slate-600 dark:text-slate-400">
                   Software Engineer
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400">
+                <p className="text-sm text-slate-600 dark:text-slate-400">
                   システムエンジニアとして、SaaSや基幹システムの構築に携わってきました。
                   その経験から得た「変化に強い設計」を活かし、作って終わりの制作ではなく、
                   お客様と共に育っていくサイト作りを目指しています。
@@ -220,7 +220,7 @@ export default function Home() {
                       {work.tags?.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[10px] font-bold tracking-widest text-slate-400 border border-slate-200 dark:border-slate-800 px-2 py-0.5 rounded"
+                          className="text-[10px] font-bold tracking-widest text-slate-600 border border-slate-300 dark:text-slate-400 dark:border-slate-700 px-2 py-0.5 rounded"
                         >
                           {tag}
                         </span>
@@ -229,7 +229,7 @@ export default function Home() {
                     <h3 className="text-2xl font-bold group-hover:text-[var(--accent)] transition-colors mb-4">
                       {work.title}
                     </h3>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                       {work.description}
                     </p>
                   </div>
@@ -257,7 +257,7 @@ export default function Home() {
 
       <footer className="py-20 text-center border-t border-[var(--card-border)] bg-[var(--background)]">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-slate-400 dark:text-slate-500 text-sm font-medium">
+          <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">
             © 2026 Bulauza.
           </p>
           <div className="flex gap-10">
@@ -274,7 +274,7 @@ export default function Home() {
               <Link
                 key={platform.name}
                 href={platform.url}
-                className="text-sm text-slate-400 hover:text-[var(--foreground)] transition-colors font-semibold"
+                className="text-sm text-slate-600 dark:text-slate-400 hover:text-[var(--foreground)] transition-colors font-semibold"
               >
                 {platform.name}
               </Link>
