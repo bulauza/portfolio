@@ -5,7 +5,7 @@
   --foreground: #0f172a;
   --card-bg: #ffffff;
   --card-border: #e2e8f0;
-  --accent: #38bdf8;
+  --accent: #0369a1;
   --accent-muted: #e0f2fe;
   --selection: #bae6fd;
 }
@@ -23,7 +23,7 @@
     --foreground: #f8fafc;
     --card-bg: #0f172a;
     --card-border: #1e293b;
-    --accent: #38bdf8;
+    --accent: #7dd3fc;
     --accent-muted: #0c4a6e;
     --selection: #075985;
   }
