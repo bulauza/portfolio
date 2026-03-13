@@ -102,7 +102,7 @@ export default function Home() {
             <div className="bento-card col-span-2 row-span-2 group">
               <div>
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
-                  Our Approach
+                  制作への想い
                 </span>
                 <h2 className="text-3xl font-bold mb-6">
                   長く　深く
@@ -133,7 +133,7 @@ export default function Home() {
             <div className="bento-card col-span-2 group">
               <div>
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
-                  Focus
+                  こだわり
                 </span>
                 <div className="grid grid-cols-2 gap-y-6 mt-2">
                   {[
@@ -169,7 +169,7 @@ export default function Home() {
             <div className="bento-card col-span-2 group">
               <div>
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
-                  Profile
+                  開発スタンス
                 </span>
                 <h3 className="text-xl font-bold mb-2 text-slate-600 dark:text-slate-400">
                   Software Engineer
