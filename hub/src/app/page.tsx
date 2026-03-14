@@ -135,30 +135,30 @@ export default function Home() {
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
                   こだわり
                 </span>
-                <div className="grid grid-cols-2 gap-y-6 mt-2">
+                <div className="grid grid-cols-1 gap-3">
                   {[
                     {
-                      label: "High Speed",
-                      desc: "表示速度で、利用者のストレスを最小限に",
+                      label: "表示の高速化",
+                      desc: "適切なコード整理と軽量化",
                     },
                     {
-                      label: "Usability",
-                      desc: "迷わせない、直感的な操作感の追求",
+                      label: "直感的なUI",
+                      desc: "ユーザーを迷わせない操作感",
                     },
                     {
-                      label: "Maintenance",
-                      desc: "納品後も、自社で楽に運用できる仕組み",
-                    },
-                    {
-                      label: "Security",
-                      desc: "データの安全を守る、堅実な基盤設計",
+                      label: "運用のしやすさ",
+                      desc: "納品後の更新を考慮した設計",
                     },
                   ].map((item) => (
-                    <div key={item.label} className="flex flex-col">
-                      <span className="text-lg font-bold">{item.label}</span>
-                      <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">
-                        {item.desc}
-                      </span>
+                    <div key={item.label} className="flex items-center gap-3">
+                      <div>
+                        <h4 className="text-lg font-boldfont-bold text-sm text-white">
+                          {item.label}
+                        </h4>
+                        <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">
+                          {item.desc}
+                        </span>
+                      </div>
                     </div>
                   ))}
                 </div>
