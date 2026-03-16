@@ -1,6 +1,12 @@
 import { getImageProps } from "next/image";
 import Link from "next/link";
 import works from "@/data/works.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBolt,
+  faFingerprint,
+  faTools,
+} from "@fortawesome/free-solid-svg-icons";
 
 type ThemedWorkImageProps = {
   darkSrc: string;
@@ -140,17 +146,23 @@ export default function Home() {
                     {
                       label: "表示の高速化",
                       desc: "適切なコード整理と軽量化",
+                      icon: <FontAwesomeIcon icon={faBolt} className="w-5" />,
                     },
                     {
                       label: "直感的なUI",
                       desc: "ユーザーを迷わせない操作感",
+                      icon: (
+                        <FontAwesomeIcon icon={faFingerprint} className="w-5" />
+                      ),
                     },
                     {
                       label: "運用のしやすさ",
                       desc: "納品後の更新を考慮した設計",
+                      icon: <FontAwesomeIcon icon={faTools} className="w-5" />,
                     },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-3">
+                      {item.icon}
                       <div>
                         <h4 className="text-lg font-boldfont-bold text-sm text-white">
                           {item.label}
