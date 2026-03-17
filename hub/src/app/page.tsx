@@ -92,8 +92,10 @@ export default function Home() {
         <section id="about" className="mb-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
-              Engineering <br />
-              <span className="text-[var(--accent)]">for Business Growth.</span>
+              LP・Webサイト制作を <br />
+              <span className="text-[var(--accent)]">
+                確かな「開発力」で支えます
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-10">
               「作りたい」の背景にあるビジネスの課題を、
