@@ -162,7 +162,10 @@ export default function Home() {
                     },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-3">
-                      <FontAwesomeIcon icon={item.icon} className="w-5" />
+                      <FontAwesomeIcon
+                        icon={item.icon}
+                        className="text-[var(--accent)] w-5"
+                      />
                       <div>
                         <h4 className="text-lg font-boldfont-bold text-sm text-white">
                           {item.label}
