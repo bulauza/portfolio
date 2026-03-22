@@ -167,9 +167,9 @@ export default function Home() {
                         className="text-[var(--accent)] w-5"
                       />
                       <div>
-                        <h4 className="text-lg font-bold text-[var(--foreground)]">
+                        <h3 className="text-lg font-bold text-[var(--foreground)]">
                           {item.label}
-                        </h4>
+                        </h3>
                         <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">
                           {item.desc}
                         </span>
