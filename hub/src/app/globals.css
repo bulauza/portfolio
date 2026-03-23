@@ -77,3 +77,9 @@ body {
     grid-auto-rows: auto;
   }
 }
+
+/* Japanese Typography Utilities */
+.break-phrase {
+  word-break: auto-phrase;
+  line-break: strict;
+}

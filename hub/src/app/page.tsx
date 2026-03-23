@@ -91,16 +91,15 @@ export default function Home() {
         {/* Hero Section */}
         <section id="about" className="mb-24">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
-              LP・Webサイト制作を <br />
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-balance break-phrase">
+              LP・Webサイト制作を
+              <br className="md:hidden" />
               <span className="text-[var(--accent)]">
                 確かな「開発力」で支えます
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-10">
-              「作りたい」の背景にあるビジネスの課題を、
-              <br className="hidden md:block" />
-              確かな設計と最適な技術で解決へ導きます。
+            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-10 text-pretty break-phrase">
+              「作りたい」の背景にあるビジネスの課題を、確かな設計と最適な技術で解決へ導きます。
             </p>
           </div>
 
@@ -112,12 +111,10 @@ export default function Home() {
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
                   制作への想い
                 </span>
-                <h2 className="text-3xl font-bold mb-6">
-                  長く　深く
-                  <br />
-                  寄り添うエンジニアリング
+                <h2 className="text-3xl font-bold mb-6 text-balance break-phrase">
+                  長く深く寄り添うエンジニアリング
                 </h2>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-pretty break-phrase">
                   「作って終わり」にせず、数年先も「頼んでよかった」と思える価値を提供し続けます。
                   当たり前のことを、当たり前に、そして高い精度で。
                   公開後の運用まで見据えた「使い心地の良さ」と「安心感」を、確かな技術で支えることが私のエンジニアリングです。
@@ -167,10 +164,10 @@ export default function Home() {
                         className="text-[var(--accent)] w-5"
                       />
                       <div>
-                        <h3 className="text-lg font-bold text-[var(--foreground)]">
+                        <h3 className="text-lg font-bold text-[var(--foreground)] break-phrase">
                           {item.label}
                         </h3>
-                        <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">
+                        <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase block text-pretty break-phrase">
                           {item.desc}
                         </span>
                       </div>
@@ -186,10 +183,10 @@ export default function Home() {
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
                   開発スタンス
                 </span>
-                <h3 className="text-xl font-bold mb-2 text-slate-600 dark:text-slate-400">
+                <h3 className="text-xl font-bold mb-2 text-slate-600 dark:text-slate-400 break-phrase">
                   Software Engineer
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
+                <p className="text-sm text-slate-600 dark:text-slate-400 text-pretty break-phrase">
                   システムエンジニアとして、SaaSや基幹システムの構築に携わってきました。
                   その経験から得た「変化に強い設計」を活かし、作って終わりの制作ではなく、
                   お客様と共に育っていくサイト作りを目指しています。
@@ -241,10 +238,10 @@ export default function Home() {
                         </span>
                       ))}
                     </div>
-                    <h3 className="text-2xl font-bold group-hover:text-[var(--accent)] transition-colors mb-4">
+                    <h3 className="text-2xl font-bold group-hover:text-[var(--accent)] transition-colors mb-4 text-balance break-phrase">
                       {work.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed text-pretty break-phrase">
                       {work.description}
                     </p>
                   </div>
