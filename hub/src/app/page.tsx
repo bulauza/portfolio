@@ -219,7 +219,7 @@ export default function Home() {
                 target="_blank"
                 className="group block"
               >
-                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-sm hover:shadow-xl transition-all duration-500">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
                   {work.imageDark && work.imageLight && (
                     <ThemedWorkImage
                       darkSrc={work.imageDark}
