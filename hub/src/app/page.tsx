@@ -99,7 +99,9 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-10 text-pretty break-phrase">
-              「作りたい」の背景にあるビジネスの課題を、確かな設計と最適な技術で解決へ導きます。
+              LP・Webサイトは公開してからが本当の勝負。
+              <br />
+              A/Bテストや改善を高速化する、保守性の高い実装をご提供します。
             </p>
           </div>
 
@@ -112,11 +114,15 @@ export default function Home() {
                   制作への想い
                 </span>
                 <h2 className="text-3xl font-bold mb-6 text-balance break-phrase">
-                  長く深く寄り添うエンジニアリング
+                  長く・深く
+                  <br />
+                  寄り添うエンジニアリング
                 </h2>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-pretty break-phrase">
-                  「作って終わり」にせず、数年先も「頼んでよかった」と思える価値を提供し続けます。
-                  当たり前のことを、当たり前に、そして高い精度で。
+                  「作って終わり」にせず、数年先も「頼んでよかった」と思える価値を。
+                  <br />
+                  見た目が綺麗なのは当たり前。
+                  1箇所の文言変更でレイアウトが崩れたり、複雑すぎて誰も触れなくなる「使い捨てのサイト」は作りません。
                   公開後の運用まで見据えた「使い心地の良さ」と「安心感」を、確かな技術で支えることが私のエンジニアリングです。
                 </p>
               </div>
@@ -183,13 +189,12 @@ export default function Home() {
                 <span className="text-xs font-bold text-[var(--accent)] uppercase tracking-widest mb-4 block">
                   開発スタンス
                 </span>
-                <h3 className="text-xl font-bold mb-2 text-slate-600 dark:text-slate-400 break-phrase">
-                  Software Engineer
+                <h3 className="text-xl font-bold mb-2 text-[var(--foreground)] break-phrase">
+                  デザインを機能として捉える
                 </h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400 text-pretty break-phrase">
-                  システムエンジニアとして、SaaSや基幹システムの構築に携わってきました。
-                  その経験から得た「変化に強い設計」を活かし、作って終わりの制作ではなく、
-                  お客様と共に育っていくサイト作りを目指しています。
+                  ピクセル単位の再現（ピクセルパーフェクト）よりも、あらゆる画面幅での「崩れにくさ」と、ユーザーが迷わない「レスポンス」を優先します。
+                  実装上の制約や、より良いUXのアイデアは積極的に代替案を提示します。
                 </p>
               </div>
             </div>
