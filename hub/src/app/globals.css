@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ededed;
-  --foreground: #0f172a;
-  --card-bg: #ffffff;
-  --card-border: #e2e8f0;
-  --accent: #0369a1;
-  --accent-muted: #e0f2fe;
-  --selection: #bae6fd;
+  --background: #dce5ec; /* ナイトクラウド */
+  --foreground: #1e293b; /* 視認性の高い深いスレート色 */
+  --card-bg: #f7f7f5; /* 高級感があり目に優しいウォーム系オフホワイト */
+  --card-border: rgba(0, 0, 0, 0.08); /* 境界線をわずかに強調 */
+  --accent: #004f7a;
+  --accent-muted: #eff6ff;
+  --selection: #bfdbfe;
 }
 
 @theme inline {
@@ -20,7 +20,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #020617;
-    --foreground: #f8fafc;
+    --foreground: #f7f7f5;
     --card-bg: #0f172a;
     --card-border: #1e293b;
     --accent: #7dd3fc;
