@@ -1,4 +1,4 @@
-import { getImageProps } from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import works from "@/data/works.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,6 +6,7 @@ import {
   faBolt,
   faFingerprint,
   faTools,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 type ThemedWorkImageProps = {
@@ -89,7 +90,7 @@ export default function Home() {
 
       <main className="pt-32 pb-20 max-w-6xl mx-auto px-6">
         {/* Hero Section */}
-        <section id="about" className="mb-24">
+        <section id="mission" className="mb-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-balance break-phrase">
               LP・Webサイト制作を
@@ -268,6 +269,75 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+        </section>
+
+        {/* About */}
+        <section id="about" className="mt-48 mb-32 scroll-mt-24">
+          <div className="relative p-10 md:p-16 rounded-[2.5rem] overflow-hidden bg-(--card-bg)/50 backdrop-blur-2xl border border-(--card-border) shadow-sm transition-all duration-700 group hover:shadow-2xl hover:shadow-(--accent)/10 hover:border-(--accent)/30 hover:-translate-y-1">
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-(--accent)/10 rounded-full blur-[100px] group-hover:bg-(--accent)/20 transition-colors duration-700"></div>
+            <div className="absolute -left-20 -top-20 w-80 h-80 bg-(--accent)/5 rounded-full blur-[80px]"></div>
+
+            <div className="flex flex-col md:flex-row gap-12 items-start relative z-10">
+              <div className="shrink-0">
+                <div className="w-32 h-32 rounded-3xl bg-linear-to-br from-(--accent) to-(--accent)/60 flex items-center justify-center shadow-2xl transition-all duration-700 group-hover:scale-105 group-hover:shadow-(--accent)/30 overflow-hidden relative border border-(--card-border)">
+                  <Image
+                    src="/images/hoge.png"
+                    alt="Self-portrait"
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full transition-all duration-700 group-hover:scale-115 group-hover:-translate-y-2 opacity-90 group-hover:opacity-100"
+                  />
+                </div>
+              </div>
+              <div className="flex-1">
+                <span className="text-xs font-bold text-(--accent) tracking-[0.2em] uppercase mb-4 block opacity-80">
+                  ABOUT ME
+                </span>
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight text-foreground break-phrase">
+                  エンジニア / <span className="text-(--accent)">Bulauza</span>
+                </h2>
+                <h3 className="text-xl md:text-2xl font-bold mb-6 text-foreground opacity-90 break-phrase line-relaxed">
+                  「1年後の自分が、一番使いやすいコードを。」
+                </h3>
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-10 text-lg md:text-xl text-pretty break-phrase">
+                  システム開発の現場で培った「保守性への執着」をWeb制作に注ぎます。納品された時は完璧でも、少し修正しただけでレイアウトが崩れたり、表示が遅くなったりするサイトは、真の意味での「完成」ではありません。
+                  <br />
+                  <br />
+                  デザインはビジネスの「入口」ですが、コードは「土台」です。広告費をかけて集客するなら、1秒でも早くページを開くこと。社内で文言を変えたいなら、エンジニアを呼ばなくても変えられること。そうした「当たり前の品質」を追求します。
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                  <div className="border border-(--card-border) border-l-4 border-l-(--accent) pl-5 bg-(--accent-muted)/50 py-4 pr-4 rounded-r-2xl transition-colors">
+                    <span className="block text-(--accent) mb-2 text-[10px] uppercase font-black tracking-widest">
+                      技術領域
+                    </span>
+                    <span className="font-bold text-foreground leading-loose">
+                      HTML / CSS / JS / WordPress / PHP / etc.
+                    </span>
+                  </div>
+                  <div className="border border-(--card-border) border-l-4 border-l-(--accent) pl-5 bg-(--accent-muted)/50 py-4 pr-4 rounded-r-2xl transition-colors">
+                    <span className="block text-(--accent) mb-2 text-[10px] uppercase font-black tracking-widest">
+                      開発環境
+                    </span>
+                    <span className="font-bold text-foreground leading-loose">
+                      Git / Figma / Canva / Generative AI
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-14">
+                  <a
+                    href="https://crowdworks.jp/public/employees/TMP_ID"
+                    target="_blank"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full font-bold text-lg transition-all shadow-none hover:opacity-90 hover:scale-105 active:scale-95 group-hover:shadow-xl group-hover:shadow-(--accent)/20 group-hover:scale-[1.02] mt-4"
+                  >
+                    クラウドワークスで相談する
+                    <FontAwesomeIcon icon={faChevronRight} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
