@@ -31,6 +31,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+   preconnect(EXTERNAL_LINKS.CLOUDWORKS);
+
   return (
     <html lang="ja">
       <body
