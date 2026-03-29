@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { preconnect } from "react-dom";
+import { EXTERNAL_LINKS } from "@/config/links";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 
@@ -24,6 +26,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Bulauza | Portfolio",
   description: "Portfolio of Bulauza",
+  alternates: {
+    types: {
+      "application/rss+xml": "https://zenn.dev/bulauza/feed",
+    },
+  },
 };
 
 export default function RootLayout({
