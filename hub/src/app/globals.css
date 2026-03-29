@@ -1,49 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #dce5ec; /* ナイトクラウド */
-  --foreground: #1e293b; /* 視認性の高い深いスレート色 */
-  --card-bg: #f7f7f5; /* 高級感があり目に優しいウォーム系オフホワイト */
-  --card-border: rgba(0, 0, 0, 0.08); /* 境界線をわずかに強調 */
-  --accent: #004f7a;
-  --accent-muted: #eff6ff;
-  --selection: #bfdbfe;
-}
+@theme {
+  /* Colors */
+  --color-background: #dce5ec; /* ナイトクラウド */
+  --color-foreground: #1e293b; /* 視認性の高い深いスレート色 */
+  --color-card-bg: #f7f7f5; /* 高級感があり目に優しいウォーム系オフホワイト */
+  --color-card-border: rgba(0, 0, 0, 0.08); /* 境界線をわずかに強調 */
+  --color-accent: #004f7a;
+  --color-accent-muted: #eff6ff;
+  --color-selection: #bfdbfe;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Fonts */
+  --font-sans: var(--font-geist-sans), "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #020617;
-    --foreground: #f7f7f5;
-    --card-bg: #0f172a;
-    --card-border: #1e293b;
-    --accent: #7dd3fc;
-    --accent-muted: #0c4a6e;
-    --selection: #075985;
+    --color-background: #020617;
+    --color-foreground: #f7f7f5;
+    --color-card-bg: #0f172a;
+    --color-card-border: #1e293b;
+    --color-accent: #7dd3fc;
+    --color-accent-muted: #0c4a6e;
+    --color-selection: #075985;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
 
 ::selection {
-  background: var(--selection);
-  color: var(--foreground);
+  background: var(--color-selection);
+  color: var(--color-foreground);
 }
 
 /* Bento Grid Utilities */
@@ -55,8 +49,8 @@ body {
 }
 
 .bento-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
   border-radius: 1.5rem;
   padding: 2rem;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -73,7 +67,7 @@ body {
   box-shadow:
     0 30px 60px -12px rgba(0, 0, 0, 0.14),
     0 18px 36px -18px rgba(0, 0, 0, 0.08);
-  border-color: var(--accent);
+  border-color: var(--color-accent);
 }
 
 @media (max-width: 1024px) {
