@@ -1,6 +1,7 @@
 import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import works from "@/data/works.json";
+import { EXTERNAL_LINKS } from "@/config/links";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBolt,
@@ -79,7 +80,9 @@ export default function Home() {
               Works
             </Link>
             <Link
-              href="mailto:your-email@example.com"
+              href={EXTERNAL_LINKS.CLOUDWORKS}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2 bg-[var(--foreground)] text-[var(--background)] rounded-full hover:opacity-90 transition-all font-semibold"
             >
               Contact
@@ -327,14 +330,15 @@ export default function Home() {
                 </div>
 
                 <div className="mt-14">
-                  <a
-                    href="https://crowdworks.jp/public/employees/TMP_ID"
+                  <Link
+                    href={EXTERNAL_LINKS.CLOUDWORKS}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full font-bold text-lg transition-all shadow-none hover:opacity-90 hover:scale-105 active:scale-95 group-hover:shadow-xl group-hover:shadow-(--accent)/20 group-hover:scale-[1.02] mt-4"
                   >
                     クラウドワークスで相談する
                     <FontAwesomeIcon icon={faChevronRight} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -351,16 +355,18 @@ export default function Home() {
             {[
               {
                 name: "GitHub",
-                url: "https://github.com/bulauza",
+                url: EXTERNAL_LINKS.GITHUB,
               },
               {
                 name: "Zenn",
-                url: "https://zenn.dev/bulauza",
+                url: EXTERNAL_LINKS.ZENN,
               },
             ].map((platform) => (
               <Link
                 key={platform.name}
                 href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-slate-600 dark:text-slate-400 hover:text-[var(--foreground)] transition-colors font-semibold"
               >
                 {platform.name}
