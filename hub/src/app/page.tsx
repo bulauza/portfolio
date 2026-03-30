@@ -277,7 +277,7 @@ export default function Home() {
               <div className="shrink-0">
                 <div className="w-32 h-32 rounded-3xl bg-linear-to-br from-accent to-accent/60 flex items-center justify-center shadow-2xl transition-all duration-700 group-hover:scale-105 group-hover:shadow-accent/30 overflow-hidden relative border border-card-border">
                   <Image
-                    src="/images/hoge.png"
+                    src="/images/self_portrait.jpeg"
                     alt="Self-portrait"
                     width={128}
                     height={128}
