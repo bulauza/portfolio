@@ -19,7 +19,7 @@
     "id": "game-brain-training-janken",
     "title": "脳トレじゃんけん",
     "category": "Game",
-    "description": "新卒時代に研修の合間に作成したじゃんけんゲーム。ローカルストレージを用いたスコア機能も実装。",
+    "description": "新卒時代に研修の合間に作成したじゃんけんゲーム。よければ気分転換に遊んでみてください。",
     "role": "Design / Front-end",
     "period": "2022.04",
     "imageDark": "/images/works/janken/dark.png",
