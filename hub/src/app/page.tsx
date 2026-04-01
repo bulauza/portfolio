@@ -104,7 +104,7 @@ export default function Home() {
           {/* Bento Grid Layout */}
           <div className="bento-grid mt-16">
             {/* Mission Statement */}
-            <div className="bento-card col-span-2 row-span-2 group">
+            <div className="bento-card md:col-span-2 md:row-span-2 group">
               <div>
                 <span className="text-xs font-bold text-accent uppercase tracking-widest mb-4 block">
                   制作への想い
@@ -137,7 +137,7 @@ export default function Home() {
             </div>
 
             {/* Tech Stack/Focus Card */}
-            <div className="bento-card col-span-2 group">
+            <div className="bento-card md:col-span-2 group">
               <div>
                 <span className="text-xs font-bold text-accent uppercase tracking-widest mb-4 block">
                   こだわり
@@ -180,7 +180,7 @@ export default function Home() {
             </div>
 
             {/* Career Background */}
-            <div className="bento-card col-span-2 group">
+            <div className="bento-card md:col-span-2 group">
               <div>
                 <span className="text-xs font-bold text-accent uppercase tracking-widest mb-4 block">
                   開発スタンス
