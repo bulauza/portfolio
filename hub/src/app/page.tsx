@@ -89,12 +89,12 @@ export default function Home() {
         {/* Hero Section */}
         <section id="mission" className="mb-24">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-balance break-phrase">
+            <h1 className="text-3xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-balance break-phrase">
               LP・Webサイト制作を
               <br className="md:hidden" />
               <span className="text-accent">確かな「開発力」で支えます</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-10 text-pretty break-phrase">
+            <p className="text-md md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-10 text-pretty break-phrase">
               LP・Webサイトは公開してからが本当の勝負。
               <br />
               A/Bテストや改善を高速化する、保守性の高い実装をご提供します。
@@ -109,7 +109,7 @@ export default function Home() {
                 <span className="text-xs font-bold text-accent uppercase tracking-widest mb-4 block">
                   制作への想い
                 </span>
-                <h2 className="text-3xl font-bold mb-6 text-balance break-phrase">
+                <h2 className="text-2xl font-bold mb-6 text-balance break-phrase">
                   長く・深く
                   <br />
                   寄り添うエンジニアリング
@@ -166,10 +166,10 @@ export default function Home() {
                         className="text-accent w-5"
                       />
                       <div>
-                        <h3 className="text-lg font-bold text-foreground break-phrase">
+                        <h3 className="text-xl font-bold text-foreground break-phrase">
                           {item.label}
                         </h3>
-                        <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase block text-pretty break-phrase">
+                        <span className="text-[12px] text-slate-600 dark:text-slate-400 font-bold uppercase block text-pretty break-phrase">
                           {item.desc}
                         </span>
                       </div>
@@ -201,7 +201,7 @@ export default function Home() {
         <section id="works" className="mt-40">
           <div className="flex justify-between items-end mb-16 border-b border-card-border pb-8">
             <div>
-              <h2 className="text-4xl font-bold tracking-tight">
+              <h2 className="text-3xl font-bold tracking-tight">
                 Typical Works
               </h2>
             </div>
@@ -233,7 +233,7 @@ export default function Home() {
                       {work.tags?.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[10px] font-bold tracking-widest text-slate-600 border border-slate-300 dark:text-slate-400 dark:border-slate-700 px-2 py-0.5 rounded"
+                          className="text-[12px] font-bold tracking-widest text-slate-600 border border-slate-300 dark:text-slate-400 dark:border-slate-700 px-2 py-0.5 rounded"
                         >
                           {tag}
                         </span>
