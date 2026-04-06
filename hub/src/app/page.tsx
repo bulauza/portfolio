@@ -97,7 +97,7 @@ export default function Home() {
                   LP・Webサイト制作を
                 </span>
                 <span className="block">
-                  確かな「<span className="text-accent drop-shadow-sm">開発力</span>」で支えます
+                  確かな「<span className="text-brand drop-shadow-sm">開発力</span>」で支えます
                 </span>
               </h1>
             </FadeIn>
@@ -169,7 +169,7 @@ export default function Home() {
                       <div className="flex items-center gap-3 mb-3">
                         <FontAwesomeIcon
                           icon={item.icon}
-                          className="text-accent w-5 h-5 opacity-90 drop-shadow-sm"
+                          className="text-brand w-5 h-5 opacity-90 drop-shadow-sm"
                         />
                         <h3 className="text-base font-bold">{item.label}</h3>
                       </div>

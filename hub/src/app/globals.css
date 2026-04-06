@@ -6,8 +6,8 @@
   --color-foreground: #1c1917; /* Stone 900 */
   --color-card-bg: #ffffff;
   --color-card-border: rgba(28, 25, 23, 0.06);
-  --color-accent: #ea580c; /* Orange 600: 白背景・黒背景のどちらでも視認できる絶妙なテラコッタ */
-  --color-accent-muted: rgba(234, 88, 12, 0.08); 
+  --color-brand: #ea580c; /* Orange 600: システム色と被らない純粋なブランドカラー */
+  --color-brand-muted: rgba(234, 88, 12, 0.08); 
   --color-selection: rgba(234, 88, 12, 0.15);
 
   /* Fonts */
@@ -22,7 +22,7 @@
     --color-foreground: #f5f5f4; 
     --color-card-bg: #1a1a1a; 
     --color-card-border: rgba(245, 245, 244, 0.08); 
-    /* --color-accent は上書きせず、完全に同じ色（#ea580c）を使用する */
+    /* --color-brand は上書きせず、完全に同じ色（#ea580c）を使用する */
   }
 }
 
