@@ -13,7 +13,13 @@
       "demo": "/works/lp-it-consult/",
       "source": null
     },
-    "tags": ["TypeScript", "SCSS", "BEM", "Vite", "Dark Mode"]
+    "tags": [
+      "TypeScript",
+      "SCSS",
+      "BEM",
+      "Vite",
+      "Dark Mode"
+    ]
   },
   {
     "id": "game-brain-training-janken",
@@ -29,6 +35,10 @@
       "demo": "/works/game-brain-training-janken/index.html",
       "source": "https://github.com/bulauza/brain-training-janken"
     },
-    "tags": ["JavaScript", "HTML/CSS", "LocalStorage"]
+    "tags": [
+      "JavaScript",
+      "HTML/CSS",
+      "LocalStorage"
+    ]
   }
 ]
