@@ -4,3 +4,6 @@
 [submodule "works/wp-corporate"]
 	path = works/wp-corporate
 	url = https://github.com/bulauza/wp-corporate.git
+[submodule "works/wp-beauty-salon"]
+	path = works/wp-beauty-salon
+	url = https://github.com/bulauza/wp-beauty-salon.git
