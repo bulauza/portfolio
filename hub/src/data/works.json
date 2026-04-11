@@ -1,5 +1,27 @@
 [
   {
+    "id": "wp-beauty-salon",
+    "title": "Lumière | プライベートビューティーサロン",
+    "category": "WordPress / Responsive Site",
+    "description": "WordPressで構築した美容室のコンセプトサイト。カスタムテーマによる構築で、デザインの自由度と非エンジニアでも更新しやすい管理画面を両立。",
+    "role": "Design / Front-end / WordPress Development",
+    "period": "2026.04",
+    "imageDark": "/images/works/wp-beauty-salon-light.png",
+    "imageLight": "/images/works/wp-beauty-salon-light.png",
+    "featured": true,
+    "links": {
+      "demo": "https://bulauza.shop/",
+      "source": null
+    },
+    "tags": [
+      "WordPress",
+      "PHP",
+      "CSS",
+      "JavaScript",
+      "Custom Theme"
+    ]
+  },
+  {
     "id": "lp-it-consult",
     "title": "ITコンサル向け LP",
     "category": "LP / Corporate Site",
