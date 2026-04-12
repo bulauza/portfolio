@@ -7,6 +7,10 @@
     {
       "source": "/works/game-brain-training-janken/:path*",
       "destination": "https://bulauza.github.io/brain-training-janken/:path*"
+    },
+    {
+      "source": "/works/wp-beauty-salon/:path*",
+      "destination": "https://bulauza.shop/:path*"
     }
   ],
   "headers": [

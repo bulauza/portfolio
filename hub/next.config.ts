@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
 
     return [
       {
+        // WordPress サイトはローカルの Vite サーバーではなく、直接外部 URL へプロキシする
+        source: "/works/wp-beauty-salon/:path*",
+        destination: "https://bulauza.shop/:path*",
+      },
+      {
         // /works/lp-it-consult（末尾スラッシュなし）へのアクセスをローカルでindex.htmlへプロキシ
         source: "/works/:projectName",
         destination: `${baseUrl}/works/:projectName/index.html`,
