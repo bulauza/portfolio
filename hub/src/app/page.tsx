@@ -97,7 +97,9 @@ export default function Home() {
                   LP・Webサイト制作を
                 </span>
                 <span className="block">
-                  確かな「<span className="text-brand drop-shadow-sm">開発力</span>」で支えます
+                  確かな「
+                  <span className="text-brand drop-shadow-sm">開発力</span>
+                  」で支えます
                 </span>
               </h1>
             </FadeIn>
@@ -215,7 +217,7 @@ export default function Home() {
                             <ThemedWorkImage
                               darkSrc={work.imageDark}
                               lightSrc={work.imageLight}
-                              alt={work.title}
+                              alt={`${work.title} - LP制作・Web開発実績例`}
                               isPriority={index === 0}
                             />
                           </div>
@@ -298,7 +300,7 @@ export default function Home() {
                   「1年後の自分が、一番使いやすいコードを。」
                 </h3>
                 <p className="text-foreground/70 leading-relaxed mb-10 text-base md:text-lg text-pretty break-phrase">
-                  システム開発の現場で培った「保守性への執着」をWeb制作に注ぎます。
+                  プライム企業に在籍する現役エンジニアとして、システム開発の現場で培った「保守性への執着」をWeb制作に注ぎます。
                   <br />
                   「丁寧だから制作が遅い」わけではありません。モダンな技術スタックを駆使し、ビジネスの検証に必要なプロダクトを最短で市場に出すスピードも重視しています。
                   <br />

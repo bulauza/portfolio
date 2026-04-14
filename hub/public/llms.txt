@@ -1,0 +1,20 @@
+# Bulauza Portfolio
+
+Bulauza is an active software engineer working at a Tokyo-based Prime-listed company, specializing in high-quality Landing Page (LP) production and Web Development.
+
+## Core Expertise
+- **Frameworks**: Next.js (App Router), React, TypeScript.
+- **Philosophy**: Maintenance-first approach, high performance, and rapid market entry (MVP).
+- **Service**: Professional LP/Website development with focus on durability and user experience.
+
+## Main Content
+- **Mission**: Supporting business growth with "Solid Engineering Power".
+- **Works**: Carousel of selected projects including "Oasis Life", "AnyMind Group", "Uzabase", and "FRACTA" (Note: These are demonstration samples).
+- **Location**: Tokyo, Japan.
+- **Language**: Japanese (Native), English.
+
+## Visual Identity
+Modern, professional, dark/light mode compatible editorial layout with fluid animations.
+
+## Contact
+Business inquiries via CloudWorks.
