@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { preconnect } from "react-dom";
 import { EXTERNAL_LINKS } from "@/config/links";
+import { GTM_ID } from "@/config/gtm";
 import JsonLd from "@/components/JsonLd";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
@@ -83,6 +85,7 @@ export default function RootLayout({
 
   return (
     <html lang="ja">
+      <GoogleTagManager gtmId={GTM_ID} />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
