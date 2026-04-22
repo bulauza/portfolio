@@ -10,6 +10,7 @@ import {
   faTools,
 } from "@fortawesome/free-solid-svg-icons";
 import FadeIn from "@/components/FadeIn";
+import ContactForm from "@/components/ContactForm";
 
 type ThemedWorkImageProps = {
   darkSrc: string;
@@ -76,9 +77,7 @@ export default function Home() {
               Works
             </Link>
             <Link
-              href={EXTERNAL_LINKS.CLOUDWORKS}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="px-4 py-1.5 md:px-5 md:py-2 bg-foreground text-background rounded-full hover:opacity-80 transition-all font-semibold"
             >
               Contact
@@ -311,12 +310,10 @@ export default function Home() {
 
                 <div className="mt-8">
                   <Link
-                    href={EXTERNAL_LINKS.CLOUDWORKS}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#contact"
                     className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 bg-foreground text-background font-bold text-xs md:text-sm tracking-wider uppercase transition-all hover:opacity-80 group text-center"
                   >
-                    Contact via CloudWorks
+                    Contact Me
                     <FontAwesomeIcon
                       icon={faChevronRight}
                       className="group-hover:translate-x-1 transition-transform border-none"
@@ -325,6 +322,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </FadeIn>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="mb-20 scroll-mt-24">
+          <FadeIn>
+            <ContactForm />
           </FadeIn>
         </section>
       </main>
