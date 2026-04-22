@@ -18,7 +18,8 @@ export async function POST(request: Request) {
     const payload = { name, email, subject, message };
 
     await Promise.allSettled([
-      sendAutoReplyEmail(payload),
+      // TODO: spam対策ができるまでは塞ぐ
+      // sendAutoReplyEmail(payload),
       syncToSpreadsheet(payload),
     ]);
 

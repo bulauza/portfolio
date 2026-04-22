@@ -85,7 +85,7 @@ export default function ContactForm() {
           Contact
         </span>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground break-phrase">
-          お問い合わせ
+          お問い合わせ（準備中）
         </h2>
       </div>
 
@@ -178,14 +178,15 @@ export default function ContactForm() {
         <div className="mt-4 text-center">
           <button
             type="submit"
-            disabled={isSubmitting}
+            // disabled={isSubmitting}
+            disabled
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-foreground text-background font-bold text-sm tracking-wider uppercase rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 min-w-[200px]"
           >
             {isSubmitting ? (
               <span className="animate-pulse">送信中...</span>
             ) : (
               <>
-                送信する
+                準備中
                 <FontAwesomeIcon icon={faPaperPlane} className="opacity-90" />
               </>
             )}
