@@ -96,9 +96,11 @@ export default function Home() {
                   LP・Webサイト制作を
                 </span>
                 <span className="block">
-                  確かな「
-                  <span className="text-brand drop-shadow-sm">開発力</span>
-                  」で支えます
+                  確かな
+                  <span className="inline-block whitespace-nowrap">
+                    「<span className="text-brand drop-shadow-sm">開発力</span>」
+                  </span>
+                  で支えます
                 </span>
               </h1>
             </FadeIn>
