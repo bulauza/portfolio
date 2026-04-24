@@ -25,6 +25,7 @@ export default function ContactForm() {
       email: formData.get("email"),
       subject: formData.get("subject"),
       message: formData.get("message"),
+      turnstileToken: formData.get("cf-turnstile-response"),
     };
 
     try {
@@ -85,7 +86,7 @@ export default function ContactForm() {
           Contact
         </span>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground break-phrase">
-          お問い合わせ（準備中）
+          お問い合わせ
         </h2>
       </div>
 
@@ -175,18 +176,22 @@ export default function ContactForm() {
           ></textarea>
         </div>
 
+        <div
+          className="cf-turnstile"
+          data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+        ></div>
+
         <div className="mt-4 text-center">
           <button
             type="submit"
-            // disabled={isSubmitting}
-            disabled
+            disabled={isSubmitting}
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-foreground text-background font-bold text-sm tracking-wider uppercase rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 min-w-[200px]"
           >
             {isSubmitting ? (
               <span className="animate-pulse">送信中...</span>
             ) : (
               <>
-                準備中
+                送信する
                 <FontAwesomeIcon icon={faPaperPlane} className="opacity-90" />
               </>
             )}

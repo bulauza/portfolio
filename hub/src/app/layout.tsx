@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { preconnect } from "react-dom";
 import { EXTERNAL_LINKS } from "@/config/links";
@@ -82,9 +83,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
    preconnect(EXTERNAL_LINKS.CLOUDWORKS);
+   preconnect("https://challenges.cloudflare.com");
 
   return (
     <html lang="ja">
+      <head>
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+        />
+      </head>
       <GoogleTagManager gtmId={GTM_ID} />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
