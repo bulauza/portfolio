@@ -55,8 +55,6 @@ export async function POST(request: Request) {
 
     const payload = { name, email, subject, message };
 
-    console.log(turnstileToken);
-    console.log(verifyData);
     await Promise.allSettled([
       // sendAutoReplyEmail(payload),
       syncToSpreadsheet(payload),
