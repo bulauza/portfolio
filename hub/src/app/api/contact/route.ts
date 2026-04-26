@@ -56,7 +56,7 @@ export async function POST(request: Request) {
     const payload = { name, email, subject, message };
 
     await Promise.allSettled([
-      // sendAutoReplyEmail(payload),
+      sendAutoReplyEmail(payload),
       syncToSpreadsheet(payload),
     ]);
 
